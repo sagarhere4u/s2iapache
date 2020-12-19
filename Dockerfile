@@ -10,5 +10,3 @@ RUN yum update -y
 RUN yum install httpd -y
 
 EXPOSE 80
-
-CMD $STI_SCRIPTS_PATH/usage
