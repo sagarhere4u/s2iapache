@@ -15,6 +15,5 @@ RUN ln -s /tmp/index.html /var/www/html/index.html
 RUN chmod -R 777 /etc/httpd/logs /run/httpd
 
 USER apache
-
 RUN echo Sample > /tmp/index.html
 RUN chmod 777 /tmp/index.html
