@@ -18,4 +18,3 @@ USER apache
 
 RUN echo Sample > /tmp/index.html
 RUN chmod 777 /tmp/index.html
-CMD $STI_SCRIPTS_PATH/usage
