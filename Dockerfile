@@ -5,7 +5,7 @@ LABEL io.k8s.description="Platform for building Apache Web Service" \
       io.openshift.expose-services="80:http" \
       io.openshift.tags="builder,apache"
 
-RUN useradd -u 1000 apache
+RUN useradd apache
 RUN yum update -y
 RUN yum install httpd -y
 RUN setcap CAP_NET_BIND_SERVICE=+eip /usr/sbin/httpd
@@ -15,7 +15,7 @@ RUN ln -s /tmp/index.html /var/www/html/index.html
 
 RUN chmod -R 777 /etc/httpd/logs /run/httpd
 
-USER 1000
+USER apache
 
 RUN echo Sample > /tmp/index.html
 RUN chmod 777 /tmp/index.html
