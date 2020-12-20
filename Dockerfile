@@ -5,7 +5,6 @@ LABEL io.k8s.description="Platform for building Apache Web Service" \
       io.openshift.expose-services="80:http" \
       io.openshift.tags="builder,apache"
 
-RUN useradd apache
 RUN yum update -y
 RUN yum install httpd -y
 RUN setcap CAP_NET_BIND_SERVICE=+eip /usr/sbin/httpd
